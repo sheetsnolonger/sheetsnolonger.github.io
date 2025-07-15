@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>victoria tennis – portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 12px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    nav a,
+    .dropbtn {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .dropbtn:hover,
+    nav a:hover,
+    .dropdown-content a:hover {
+      background-color: #333;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #000;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content.show {
+      display: block;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-transform: lowercase;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    ul li a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .pricing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 20px;
+      width: 100%;
+      max-width: 260px;
+      flex: 1;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-transform: lowercase;
+    }
+
+    .card p strong {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">about</a>
+    <a href="#portfolio">portfolio</a>
+
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">pricing ▾</button>
+      <div id="dropdown-content" class="dropdown-content">
+        <a href="#pricing-website">websites</a>
+        <a href="#pricing-bots">discord bots</a>
+        <a href="#pricing-beats">beats</a>
+      </div>
+    </div>
+
+    <a href="#contact">contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>about me</h2>
+    <p>hi my name's victoria and i make websites, discord bots, and beats. please take a look through my website and view pricing to determine whether or not you would like to purchase from me.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>my work</h2>
+    <ul>
+      <li><a href="https://discord.com/oauth2/authorize?client_id=1394058911388143647" target="_blank">entity bot (multipurpose)</a></li>
+      <li><a href="https://discord.com/oauth2/authorize?client_id=1393961402242433104" target="_blank">crimson (multipurpose Fatal Frame themed.)</a></li>
+      <li><a href="https://open.spotify.com/artist/4IfSd4bm03gUiLY7ckdAPA?si=XK0nJ_VUT2CPq8CLnTQ4Jw" target="_blank">shoegaze project</a></li>
+    </ul>
+  </section>
+
+  <section id="pricing">
+    <h2>pricing</h2>
+    <div class="pricing-cards">
+
+      <div id="pricing-website" class="card">
+        <h3>websites</h3>
+        <p><strong>$50+</strong></p>
+        <ul>
+          <li>responsive design</li>
+          <li>custom features</li>
+          <li>2 weeks delivery</li>
+        </ul>
+        <p><a href="#contact">get started</a></p>
+      </div>
+
+      <div id="pricing-bots" class="card">
+        <h3>discord bots</h3>
+        <p><strong>$45+</strong></p>
+        <ul>
+          <li>custom commands</li>
+          <li>moderation, music, utility</li>
+          <li>1 week delivery</li>
+        </ul>
+        <p><a href="#contact">get started</a></p>
+      </div>
+
+      <div id="pricing-beats" class="card">
+        <h3>beats</h3>
+        <p><strong>$30+</strong></p>
+        <ul>
+          <li>original compositions</li>
+          <li>multiple genres</li>
+          <li>high-quality audio</li>
+        </ul>
+        <p><a href="#contact">get started</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>contact</h2>
+    <p>reach me at: <a href="mailto:sheetsnolonger@gmail.com">sheetsnolonger@gmail.com</a></p>
+    <p>or find me on social media:</p>
+    <ul>
+      <li><a href="https://twitter.com/entitybott" target="_blank">twt</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 victoria tennis. all rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown-content");
+      dropdown.classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          dropdowns[i].classList.remove("show");
+        }
+      }
+    };
+  </script>
+
+</body>
+</html>
