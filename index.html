@@ -3,8 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>victoria tennis – portfolio</title>
+  <title>sheetsnolonger – portfolio</title>
   <style>
+    :root {
+      --bg: #f4f4f9;
+      --text: #111;
+      --primary: #444;
+      --accent: #0066cc;
+      --card-bg: #fff;
+      --nav-bg: #111;
+      --hover-bg: #222;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -12,36 +22,54 @@
     }
 
     body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
+      font-family: 'Times New Roman', 'Times New Roman';
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
-    nav {
+.dropdown, .dropdown * {
+  font-family: "Times New Roman", Times, serif;
+}
+
+    header {
       background-color: #111;
-      padding: 12px 20px;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: normal;
+      text-transform: lowercase;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: var(--nav-bg);
+      padding: 14px 24px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 12px;
+      justify-content: center;
+      gap: 16px;
     }
 
-    nav a,
-    .dropbtn {
+    nav a, .dropbtn {
       color: #fff;
       text-decoration: none;
-      padding: 8px 12px;
+      padding: 10px 16px;
       background: none;
       border: none;
       cursor: pointer;
       font-size: 16px;
+      transition: background 0.3s;
     }
 
-    .dropbtn:hover,
-    nav a:hover,
-    .dropdown-content a:hover {
-      background-color: #333;
+    nav a:hover, .dropbtn:hover, .dropdown-content a:hover {
+      background-color: var(--hover-bg);
+      border-radius: 6px;
     }
 
     .dropdown {
@@ -52,17 +80,20 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #fff;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
+      background-color: var(--card-bg);
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      border-radius: 6px;
+      overflow: hidden;
+      animation: fadeIn 0.3s ease;
     }
 
     .dropdown-content a {
-      color: #000;
-      padding: 10px 14px;
-      text-decoration: none;
+      color: var(--text);
+      padding: 12px 18px;
       display: block;
+      transition: background 0.3s;
     }
 
     .dropdown-content.show {
@@ -70,28 +101,30 @@
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 60px 20px;
+      max-width: 900px;
       margin: auto;
     }
 
     h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 24px;
       text-transform: lowercase;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
     }
 
     ul {
-      list-style-type: none;
+      list-style: none;
       padding-left: 0;
     }
 
     ul li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     ul li a {
-      color: #0066cc;
+      color: var(--accent);
       text-decoration: none;
     }
 
@@ -102,40 +135,57 @@
     .pricing-cards {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 24px;
+      justify-content: center;
     }
 
     .card {
-      border: 1px solid #ccc;
-      background: #fff;
-      padding: 20px;
-      width: 100%;
-      max-width: 260px;
-      flex: 1;
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      flex: 1 1 250px;
+      max-width: 280px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+      font-size: 22px;
+      margin-bottom: 12px;
       text-transform: lowercase;
+      color: var(--primary);
     }
 
     .card p strong {
       font-size: 18px;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
+      padding: 24px;
+      background: var(--nav-bg);
+      color: #ccc;
       font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>sheetsnolonger</h1>
+  </header>
 
   <nav>
     <a href="#about">about</a>
@@ -162,7 +212,7 @@
     <h2>my work</h2>
     <ul>
       <li><a href="https://discord.com/oauth2/authorize?client_id=1394058911388143647" target="_blank">entity bot (multipurpose)</a></li>
-      <li><a href="https://discord.com/oauth2/authorize?client_id=1393961402242433104" target="_blank">crimson (multipurpose Fatal Frame themed.)</a></li>
+      <li><a href="https://discord.com/oauth2/authorize?client_id=1393961402242433104" target="_blank">crimson (multipurpose Fatal Frame themed)</a></li>
       <li><a href="https://open.spotify.com/artist/4IfSd4bm03gUiLY7ckdAPA?si=XK0nJ_VUT2CPq8CLnTQ4Jw" target="_blank">shoegaze project</a></li>
     </ul>
   </section>
