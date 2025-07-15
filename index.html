@@ -1,290 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>sheetsnolonger – portfolio</title>
   <style>
     :root {
-      --bg: #f4f4f9;
-      --text: #111;
-      --primary: #444;
-      --accent: #0066cc;
-      --card-bg: #fff;
-      --nav-bg: #111;
-      --hover-bg: #222;
+      --bg: #1a1a1d;
+      --text: #ffffff;
+      --accent: #ffffff;
+      --highlight: #2c2c30;
+      --card-bg: #222;
+      --border: #ff4d4d;
+
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
     }
 
     body {
-      font-family: 'Times New Roman', 'Times New Roman';
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-    }
-
-.dropdown, .dropdown * {
-  font-family: "Times New Roman", Times, serif;
-}
-
-    header {
-      background-color: #111;
-      padding: 40px 20px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 36px;
-      font-weight: normal;
-      text-transform: lowercase;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      background-color: var(--nav-bg);
-      padding: 14px 24px;
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       justify-content: center;
-      gap: 16px;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
     }
 
-    nav a, .dropbtn {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 16px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-
-    nav a:hover, .dropbtn:hover, .dropdown-content a:hover {
-      background-color: var(--hover-bg);
-      border-radius: 6px;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
+    .card {
       background-color: var(--card-bg);
-      min-width: 180px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      z-index: 2;
-      border-radius: 6px;
-      overflow: hidden;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .dropdown-content a {
-      color: var(--text);
-      padding: 12px 18px;
-      display: block;
-      transition: background 0.3s;
-    }
-
-    .dropdown-content.show {
-      display: block;
-    }
-
-    section {
-      padding: 60px 20px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
       max-width: 900px;
-      margin: auto;
+      width: 100%;
+      padding: 40px 50px;
+      text-align: center;
+      border: 2px dashed var(--border);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    p.subtitle {
+      font-size: 18px;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .section {
+      margin-bottom: 32px;
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 24px;
+      font-size: 22px;
+      color: var(--accent);
+      margin-bottom: 12px;
       text-transform: lowercase;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 6px;
     }
 
     ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
+      margin: 0;
     }
 
     ul li {
-      margin-bottom: 12px;
+      margin: 8px 0;
     }
 
-    ul li a {
-      color: var(--accent);
+    a {
+      color: var(--text);
       text-decoration: none;
     }
 
-    ul li a:hover {
+    a:hover {
       text-decoration: underline;
     }
 
-    .pricing-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: center;
+    .pricing {
+      background-color: var(--highlight);
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
     }
 
-    .card {
-      background: var(--card-bg);
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      flex: 1 1 250px;
-      max-width: 280px;
-      transition: transform 0.2s ease;
+    .pricing h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: var(--text);
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .pricing p {
+      font-size: 15px;
+      margin: 4px 0;
+      color: var(--text);
     }
 
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-      text-transform: lowercase;
-      color: var(--primary);
-    }
+.contact a {
+  display: block;
+  margin: 6px 0;
+  color: #ff4d4d;
+  text-decoration: none;
+}
 
-    .card p strong {
-      font-size: 18px;
-      display: block;
-      margin-bottom: 12px;
-    }
+.contact a:hover {
+  color: #ff4d4d;
+  text-decoration: underline;
+}
 
     footer {
-      text-align: center;
-      padding: 24px;
-      background: var(--nav-bg);
-      color: #ccc;
+      margin-top: 30px;
       font-size: 14px;
-      margin-top: 40px;
+      color: var(--text);
     }
+    
+    ul li a {
+  color: #ff4d4d;
+  text-decoration: none;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+ul li a:hover {
+  color: #ff4d4d;
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
-
-  <header>
+  <div class="card">
     <h1>sheetsnolonger</h1>
-  </header>
+    <p class="subtitle">websites • discord bots • beats</p>
 
-  <nav>
-    <a href="#about">about</a>
-    <a href="#portfolio">portfolio</a>
+    <div class="section">
+      <h2>about</h2>
+      <p>i’m victoria — i create custom websites, discord bots, and original music. my work focuses on what you want, with a bit of a personal touch.</p>
+    </div>
 
-    <div class="dropdown">
-      <button class="dropbtn" onclick="toggleDropdown()">pricing ▾</button>
-      <div id="dropdown-content" class="dropdown-content">
-        <a href="#pricing-website">websites</a>
-        <a href="#pricing-bots">discord bots</a>
-        <a href="#pricing-beats">beats</a>
+    <div class="section">
+      <h2>portfolio</h2>
+      <ul>
+        <li><a href="https://discord.com/oauth2/authorize?client_id=1394058911388143647" target="_blank">entity bot</a></li>
+        <li><a href="https://discord.com/oauth2/authorize?client_id=1393961402242433104" target="_blank">crimson bot</a></li>
+        <li><a href="https://open.spotify.com/artist/4IfSd4bm03gUiLY7ckdAPA" target="_blank">shoegaze music</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>pricing</h2>
+      <div class="pricing">
+        <h3>websites – $50+</h3>
+        <p>responsive, custom features</p>
+        <h3>discord bots – $45+</h3>
+        <p>custom commands, fun, moderation & utility</p>
+        <h3>beats – $30+</h3>
+        <p>original audio in dreamy genres</p>
       </div>
     </div>
 
-    <a href="#contact">contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>about me</h2>
-    <p>hi my name's victoria and i make websites, discord bots, and beats. please take a look through my website and view pricing to determine whether or not you would like to purchase from me.</p>
-  </section>
-
-  <section id="portfolio">
-    <h2>my work</h2>
-    <ul>
-      <li><a href="https://discord.com/oauth2/authorize?client_id=1394058911388143647" target="_blank">entity bot (multipurpose)</a></li>
-      <li><a href="https://discord.com/oauth2/authorize?client_id=1393961402242433104" target="_blank">crimson (multipurpose Fatal Frame themed)</a></li>
-      <li><a href="https://open.spotify.com/artist/4IfSd4bm03gUiLY7ckdAPA?si=XK0nJ_VUT2CPq8CLnTQ4Jw" target="_blank">shoegaze project</a></li>
-    </ul>
-  </section>
-
-  <section id="pricing">
-    <h2>pricing</h2>
-    <div class="pricing-cards">
-
-      <div id="pricing-website" class="card">
-        <h3>websites</h3>
-        <p><strong>$50+</strong></p>
-        <ul>
-          <li>responsive design</li>
-          <li>custom features</li>
-          <li>2 weeks delivery</li>
-        </ul>
-        <p><a href="#contact">get started</a></p>
-      </div>
-
-      <div id="pricing-bots" class="card">
-        <h3>discord bots</h3>
-        <p><strong>$45+</strong></p>
-        <ul>
-          <li>custom commands</li>
-          <li>moderation, music, utility</li>
-          <li>1 week delivery</li>
-        </ul>
-        <p><a href="#contact">get started</a></p>
-      </div>
-
-      <div id="pricing-beats" class="card">
-        <h3>beats</h3>
-        <p><strong>$30+</strong></p>
-        <ul>
-          <li>original compositions</li>
-          <li>multiple genres</li>
-          <li>high-quality audio</li>
-        </ul>
-        <p><a href="#contact">get started</a></p>
-      </div>
-
+    <div class="section contact">
+      <h2>contact</h2>
+      <a href="mailto:sheetsnolonger@gmail.com">email me</a>
+      <a href="https://twitter.com/entitybott" target="_blank">twitter</a>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>contact</h2>
-    <p>reach me at: <a href="mailto:sheetsnolonger@gmail.com">sheetsnolonger@gmail.com</a></p>
-    <p>or find me on social media:</p>
-    <ul>
-      <li><a href="https://twitter.com/entitybott" target="_blank">twt</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 victoria tennis. all rights reserved.</p>
-  </footer>
-
-  <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById("dropdown-content");
-      dropdown.classList.toggle("show");
-    }
-
-    window.onclick = function (event) {
-      if (!event.target.matches('.dropbtn')) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-          dropdowns[i].classList.remove("show");
-        }
-      }
-    };
-  </script>
-
+    <footer>
+      &copy; 2025 sheetsnolonger.
+    </footer>
+  </div>
 </body>
 </html>
+
