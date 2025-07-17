@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>code & music commissions</title>
+  <style>
+    body {
+      background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat, #000;
+      color: #eee;
+      font-family: "Times New Roman", serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      text-transform: lowercase;
+    }
+
+    h1 {
+      font-size: 48px;
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      border: 2px dashed #555;
+    }
+
+    .blink {
+      animation: blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    .card, .portfolio, .contact {
+      border: 1px solid #444;
+      margin: 20px;
+      padding: 20px;
+      background: #222;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #333;
+      border: 2px solid #666;
+      color: #eee;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: #555;
+      color: #fff;
+    }
+
+    input, textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #444;
+      background: #111;
+      color: #eee;
+      font-family: "Times New Roman", serif;
+      text-transform: lowercase;
+    }
+
+    img {
+      border: 2px solid #666;
+    }
+
+    marquee {
+      background: #000;
+      color: #0f0;
+      font-size: 24px;
+      padding: 10px;
+      border-top: 2px solid #222;
+      border-bottom: 2px solid #222;
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #ccc;
+    }
+
+    .features p {
+      margin: 5px 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="blink">custom code & beats 4 u</h1>
+
+  <marquee behavior="scroll" direction="left">codez & beats available now!</marquee>
+
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnl3b2lobXF6ZjRzaXlqMjJqdjNub2x6OW93MjJxZmJ4ZWx0ZzAxbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ErZ8hv5eO92JW/giphy.gif" alt="lucky star wink" width="200">
+
+  <div class="card">
+    <h2>html & css site</h2>
+    <p><strong>price:</strong> $50</p>
+    <div class="features">
+      <p>one customized website to yr liking</p>
+      <p>any theme</p>
+      <p>delivered in html format</p>
+    </div>
+    <a href="#contact" class="btn">i would like this.</a>
+  </div>
+
+  <div class="card">
+    <h2>multipurpose discord bot</h2>
+    <p><strong>price:</strong> $45</p>
+    <div class="features">
+      <p>one custom discord bot</p>
+      <p>multipurpose</p>
+      <p>includes utilities, moderation, and fun commands</p>
+    </div>
+    <a href="#contact" class="btn">i would like this.</a>
+  </div>
+
+  <div class="card">
+    <h2>one full track</h2>
+    <p><strong>price:</strong> $40</p>
+    <div class="features">
+      <p>full beat</p>
+      <p>original</p>
+      <p>royalty-free</p>
+    </div>
+    <a href="#contact" class="btn">i would like this.</a>
+  </div>
+
+  <div class="portfolio">
+    <h2>my work</h2>
+    <p>check out what i do</p>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <a href="http://sheetsnolonger.blog" target="_blank">
+        <img src="https://i.pinimg.com/736x/78/61/90/7861902f0353debce0908841a1196c56.jpg" alt="html site" width="150">
+        <p>html site</p>
+      </a>
+      <a href="https://discord.com/oauth2/authorize?client_id=1394832351011536947" target="_blank">
+        <img src="https://i.pinimg.com/736x/50/e1/eb/50e1eb46a0a1f4cc7d835dbb76f528bd.jpg" alt="discord bot" width="150">
+        <p>discord bot</p>
+      </a>
+      <a href="https://open.spotify.com/artist/4IfSd4bm03gUiLY7ckdAPA" target="_blank">
+        <img src="https://ugc.production.linktr.ee/241aa2c9-d63d-42a7-ad73-97093f14416c_IMG-9623.jpeg?io=true&size=avatar-v3_0" alt="music" width="150">
+        <p>my music</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="contact" id="contact">
+    <h2>contact me</h2>
+    <form action="https://formspree.io/f/myzpyqwy" method="POST">
+      <input type="text" name="name" placeholder="yr name" required><br>
+      <input type="email" name="email" placeholder="yr gmail" required><br>
+      <textarea name="message" placeholder="tell me what you would like to purchase, and i will get back to you asap." rows="5" required></textarea><br>
+      <button class="btn" type="submit">send vibes</button>
+    </form>
+  </div>
+
+  <marquee behavior="alternate" direction="right">it was nice to see you, stop by again soon!</marquee>
+</body>
+</html>
