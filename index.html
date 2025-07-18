@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>vicky — portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'EB Garamond', serif;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat #000;
+  background-attachment: scroll;
+  background-size: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  scroll-behavior: smooth;
+}
+
+
+
+    .card {
+      background: #111;
+      border: 2px solid #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+      padding: 3rem 2rem;
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #bbb;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin: 1.5rem 0 3rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background-color: transparent;
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      margin: 0.4rem;
+      border-radius: 999px;
+      border: 1px solid #fff;
+      font-weight: bold;
+      transition: background 0.2s ease, color 0.2s ease;
+      display: inline-block;
+    }
+
+    .buttons a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+
+    th, td {
+      border: 1px solid #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    th {
+      background-color: #222;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    td {
+      background-color: #111;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      table, thead, tbody, th, td, tr {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Optional: anchor offset support if you add fixed headers later */
+    [id] {
+      scroll-margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>sheetsnolonger</h1>
+    <p class="tagline">sitez · codez · beatz</p>
+    <p>hi, my name is vicky. i make discord bots, websites, and beats. please check out the pricing table at the bottom of the page.</p>
+
+    <div class="buttons">
+      <a href="#pricing">pricing</a>
+      <a href="#contact">contact</a>
+      <a href="#donate">donate</a>
+    </div>
+
+    <h2 id="pricing">pricing</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>service</th>
+          <th>description</th>
+          <th>price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>website (pro)</td>
+          <td>multi-page site with animations + mobile support</td>
+          <td>$80</td>
+        </tr>
+        <tr>
+          <td>website (basic)</td>
+          <td>single-page site with a custom design</td>
+          <td>$60</td>
+        </tr>
+        <tr>
+          <td>discord bot</td>
+          <td>custom features, moderation, ai, utility, fun</td>
+          <td>$45+</td>
+        </tr>
+        <tr>
+          <td>beats / music</td>
+          <td>custom loops, dreamy beats, or bgm</td>
+          <td>$30+</td>
+        </tr>
+      </tbody>
+    </table>
+
+<h2 id="contact" style="margin-top: 4rem;">email me</h2>
+<p>you can reach me directly by filling out this form:</p>
+
+<form action="https://formspree.io/f/xvgqgygq" method="POST" style="max-width: 500px; margin: 2rem auto 0;">
+  <label for="email" style="display:block; text-align:left; margin-bottom: 0.3rem;">your email</label>
+  <input type="email" name="email" id="email" required
+    style="width: 100%; padding: 0.6rem; border: 1px solid #fff; background: #000; color: #fff; margin-bottom: 1rem;" />
+
+  <label for="message" style="display:block; text-align:left; margin-bottom: 0.3rem;">message</label>
+  <textarea name="message" id="message" required rows="5"
+    style="width: 100%; padding: 0.6rem; border: 1px solid #fff; background: #000; color: #fff; margin-bottom: 1rem;"></textarea>
+
+  <button type="submit"
+    style="background: transparent; color: #fff; border: 1px solid #fff; padding: 0.6rem 1.4rem; border-radius: 999px; cursor: pointer; transition: 0.2s;">
+    send
+  </button>
+</form>
+
+<h2 id="donate" style="margin-top: 4rem;">support my work</h2>
+<p>if you enjoy what i make, you can send a donation through ko-fi.</p>
+
+<div style="margin-top: 1.5rem;">
+  <a href="https://ko-fi.com/sheetsnolonger" target="_blank"
+     style="display: inline-block; text-decoration: none; border: 1px solid #fff; padding: 0.8rem 2rem; border-radius: 999px; color: #fff; font-weight: bold; transition: 0.2s;">
+    donate on ko-fi
+  </a>
+</div>
+
+
+  <footer>
+   © 2025 sheetsnolonger
+  </footer>
+</body>
+</html>
