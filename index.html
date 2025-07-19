@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>sheetsnolonger - music blog</title>
+  <style>
+    :root {
+      --font: 'Times New Roman', serif;
+      --text: #111;
+      --background: #fff;
+      --accent: #222;
+      --border: #222;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .post-preview, .post-full {
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      background: #fefefe;
+    }
+
+    .post-preview h2 a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .post-preview h2 a:hover {
+      text-decoration: underline;
+    }
+
+    .subscribe {
+      background: #f9f9f9;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      text-align: center;
+      margin: 4rem auto 0;
+    }
+
+    .subscribe input[type="email"] {
+      padding: 0.75rem;
+      width: 60%;
+      max-width: 300px;
+      border: 1px solid #aaa;
+      font-size: 1rem;
+      font-family: var(--font);
+    }
+
+    .subscribe button {
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+
+    .subscribe button:hover {
+      background: #000;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .subscribe input[type="email"] {
+        width: 90%;
+        margin-bottom: 1rem;
+      }
+
+      .subscribe button {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>sheetsnolonger</h1>
+    <p>a music blog for thoughts n sounds.</p>
+  </header>
+
+  <main id="content">
+    <!-- Posts will be inserted here -->
+  </main>
+
+  <section class="subscribe">
+    <h2>subscribe</h2>
+    <p>get notified when we post about music again.</p>
+    <form action="https://formspree.io/f/movljveq" method="POST">
+      <input type="email" name="email" placeholder="your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 sheetsnolonger. all rights reserved.
+  </footer>
+
+  <script>
+    const posts = [
+      {
+        id: "vinyls",
+        title: "vinyl records",
+        date: "july 18, 2025",
+        content: "I LOVE VINYL RECORDS1!!!!!! i remember popping a pink floyd vinyl on the record player when my dad still lived with us and him and i would always just jam outtt it was so much fun"
+      },
+      {
+        id: "chords",
+        title: "minor chords suck.",
+        date: "july 17, 2025",
+        content: "i hate minor chords. they always have the best sound but the weirdest finger placements. im so done with them bc tell me why i have to get arthritis in order to be good at guitar. no. ive been playing for 10 years, im done. not actually i love my guitar."
+      }
+    ];
+
+    const contentEl = document.getElementById("content");
+
+    function renderPostList() {
+      contentEl.innerHTML = "";
+      posts.forEach(post => {
+        const div = document.createElement("div");
+        div.className = "post-preview";
+        div.innerHTML = `
+          <h2><a href="#${post.id}">${post.title}</a></h2>
+          <p><em>${post.date}</em></p>
+          <p>${post.content.slice(0, 120)}...</p>
+        `;
+        contentEl.appendChild(div);
+      });
+    }
+
+    function renderSinglePost(postId) {
+      const post = posts.find(p => p.id === postId);
+      if (!post) {
+        contentEl.innerHTML = "<p>post not found.</p>";
+        return;
+      }
+
+      contentEl.innerHTML = `
+        <div class="post-full">
+          <h2>${post.title}</h2>
+          <p><em>${post.date}</em></p>
+          <p>${post.content}</p>
+          <a href="#" class="back-link">← back to all posts</a>
+        </div>
+      `;
+    }
+
+    function handleRouting() {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        renderSinglePost(hash);
+      } else {
+        renderPostList();
+      }
+    }
+
+    window.addEventListener("hashchange", handleRouting);
+    window.addEventListener("DOMContentLoaded", handleRouting);
+  </script>
+</body>
+</html>
+
