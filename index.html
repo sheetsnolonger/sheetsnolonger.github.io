@@ -4,141 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>sheetsnolonger - music blog</title>
-  <style>
-    :root {
-      --font: 'Times New Roman', serif;
-      --text: #111;
-      --background: #fff;
-      --accent: #222;
-      --border: #222;
-    }
+<style>
+  body {
+    background: #fff;
+    color: #000;
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font);
-      background: var(--background);
-      color: var(--text);
-      line-height: 1.6;
-    }
+  header {
+    background: #0000cc;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 4px double #000;
+  }
 
-    header {
-      background: var(--accent);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+  header h1 {
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 1px;
-    }
+  header p {
+    margin: 0.5rem 0;
+    font-style: italic;
+    font-size: 16px;
+  }
 
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      font-style: italic;
-    }
+  main {
+    max-width: 750px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 2px solid #000;
+    background: #f0f0f0;
+  }
 
+  .post-preview, .post-full {
+    border: 2px solid #000;
+    padding: 1rem;
+    background: #fff;
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', serif;
+  }
+
+  .post-preview h2 a {
+    color: #0000cc;
+    text-decoration: underline;
+  }
+
+  .post-preview h2 a:hover {
+    background: yellow;
+  }
+
+  .subscribe {
+    background: #e0e0e0;
+    padding: 1rem;
+    border: 2px dashed #000;
+    text-align: center;
+  }
+
+  .subscribe input[type="email"] {
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 2px inset #000;
+    background: #fff;
+    width: 250px;
+  }
+
+  .subscribe button {
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: #c0c0c0;
+    border: 2px outset #000;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .subscribe button:hover {
+    background: #a0a0a0;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: underline;
+    color: #0000cc;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #444;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    border-top: 2px dotted #000;
+    font-family: 'Times New Roman', serif;
+  }
+
+  @media (max-width: 600px) {
     main {
-      max-width: 700px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+      margin: 1rem;
+      padding: 0.5rem;
     }
 
-    .post-preview, .post-full {
-      border: 1px solid var(--border);
-      padding: 1.5rem;
-      margin-bottom: 2.5rem;
-      background: #fefefe;
-    }
-
-    .post-preview h2 a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .post-preview h2 a:hover {
-      text-decoration: underline;
-    }
-
-    .subscribe {
-      background: #f9f9f9;
-      padding: 2rem;
-      border: 1px solid var(--border);
-      text-align: center;
-      margin: 4rem auto 0;
-    }
-
-    .subscribe input[type="email"] {
-      padding: 0.75rem;
-      width: 60%;
-      max-width: 300px;
-      border: 1px solid #aaa;
-      font-size: 1rem;
-      font-family: var(--font);
-    }
-
+    .subscribe input,
     .subscribe button {
-      padding: 0.75rem 1.25rem;
-      font-size: 1rem;
-      background: var(--accent);
-      color: white;
-      border: none;
-      cursor: pointer;
-      margin-left: 0.5rem;
+      width: 100%;
+      display: block;
+      margin: 0.5rem auto;
     }
+  }
+</style>
 
-    .subscribe button:hover {
-      background: #000;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 1px solid #ccc;
-      margin-top: 4rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .subscribe input[type="email"] {
-        width: 90%;
-        margin-bottom: 1rem;
-      }
-
-      .subscribe button {
-        width: 90%;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1>sheetsnolonger</h1>
-    <p>a music blog for thoughts n sounds.</p>
+    <p>a music blog for thoughts & sounds.</p>
   </header>
 
   <main id="content">
-    <!-- Posts will be inserted here -->
+    <!-- Posts will load here -->
   </main>
 
   <section class="subscribe">
@@ -146,7 +136,7 @@
     <p>get notified when we post about music again.</p>
     <form action="https://formspree.io/f/movljveq" method="POST">
       <input type="email" name="email" placeholder="your email" required />
-      <button type="submit">Subscribe</button>
+      <button type="submit">subscribe</button>
     </form>
   </section>
 
@@ -217,4 +207,3 @@
   </script>
 </body>
 </html>
-
