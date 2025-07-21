@@ -119,7 +119,6 @@
     }
   }
 </style>
-
 </head>
 <body>
   <header>
@@ -147,6 +146,7 @@
   <script>
     const posts = [
       {
+      
         id: "vinyls",
         title: "vinyl records",
         date: "july 18, 2025",
@@ -155,26 +155,37 @@
       {
         id: "chords",
         title: "minor chords suck.",
-        date: "july 17, 2025",
+        date: "july 18, 2025",
         content: "i hate minor chords. they always have the best sound but the weirdest finger placements. im so done with them bc tell me why i have to get arthritis in order to be good at guitar. no. ive been playing for 10 years, im done. not actually i love my guitar."
+      },
+      {
+        id: "19drawing",
+        title: "drew myself",
+        date: "july 19, 2025",
+        content: `
+          <img src="https://i.pinimg.com/736x/53/c1/1b/53c11b3ad719d0517afdab5c2d6e8f20.jpg" alt="sheetsnolonger" style="max-width:30%;margin-bottom:1rem;">
+          i drew myself, and im actually pretty proud of it. 
+        `
       }
     ];
 
     const contentEl = document.getElementById("content");
 
-    function renderPostList() {
-      contentEl.innerHTML = "";
-      posts.forEach(post => {
-        const div = document.createElement("div");
-        div.className = "post-preview";
-        div.innerHTML = `
-          <h2><a href="#${post.id}">${post.title}</a></h2>
-          <p><em>${post.date}</em></p>
-          <p>${post.content.slice(0, 120)}...</p>
-        `;
-        contentEl.appendChild(div);
-      });
-    }
+function renderPostList() {
+  contentEl.innerHTML = "";
+  [...posts].reverse().forEach(post => {
+    const textOnly = post.content.replace(/<img[^>]*>/gi, ''); // Remove any <img> tags
+    const div = document.createElement("div");
+    div.className = "post-preview";
+    div.innerHTML = `
+      <h2><a href="#${post.id}">${post.title}</a></h2>
+      <p><em>${post.date}</em></p>
+      <p>${textOnly.slice(0, 120)}...</p>
+    `;
+    contentEl.appendChild(div);
+  });
+}
+
 
     function renderSinglePost(postId) {
       const post = posts.find(p => p.id === postId);
@@ -187,7 +198,7 @@
         <div class="post-full">
           <h2>${post.title}</h2>
           <p><em>${post.date}</em></p>
-          <p>${post.content}</p>
+          <div>${post.content}</div>
           <a href="#" class="back-link">← back to all posts</a>
         </div>
       `;
