@@ -9,212 +9,67 @@
     background: #fff;
     color: #000;
     font-family: 'Times New Roman', serif;
-    margin: 0;
-    padding: 0;
-  }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  header {
-    background: #0000cc;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    border-bottom: 4px double #000;
-  }
-
-  header h1 {
-    font-size: 36px;
-    margin: 0;
-    text-transform: uppercase;
-  }
-
-  header p {
-    margin: 0.5rem 0;
-    font-style: italic;
-    font-size: 16px;
-  }
-
-  main {
-    max-width: 750px;
-    margin: 2rem auto;
-    padding: 1rem;
-    border: 2px solid #000;
-    background: #f0f0f0;
-  }
-
-  .post-preview, .post-full {
-    border: 2px solid #000;
-    padding: 1rem;
-    background: #fff;
-    margin-bottom: 2rem;
-    font-family: 'Times New Roman', serif;
-  }
-
-  .post-preview h2 a {
-    color: #0000cc;
-    text-decoration: underline;
-  }
-
-  .post-preview h2 a:hover {
-    background: yellow;
-  }
-
-  .subscribe {
-    background: #e0e0e0;
-    padding: 1rem;
-    border: 2px dashed #000;
-    text-align: center;
-  }
-
-  .subscribe input[type="email"] {
-    font-family: 'Times New Roman', serif;
-    font-size: 1rem;
-    padding: 0.5rem;
-    border: 2px inset #000;
-    background: #fff;
-    width: 250px;
-  }
-
-  .subscribe button {
-    font-family: 'Times New Roman', serif;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    background: #c0c0c0;
-    border: 2px outset #000;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-
-  .subscribe button:hover {
-    background: #a0a0a0;
-  }
-
-  .back-link {
-    display: inline-block;
-    margin-top: 1rem;
-    text-decoration: underline;
-    color: #0000cc;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 12px;
-    color: #444;
-    margin-top: 3rem;
-    padding: 1rem 0;
-    border-top: 2px dotted #000;
-    font-family: 'Times New Roman', serif;
-  }
-
-  @media (max-width: 600px) {
-    main {
-      margin: 1rem;
-      padding: 0.5rem;
-    }
-
-    .subscribe input,
-    .subscribe button {
-      width: 100%;
-      display: block;
-      margin: 0.5rem auto;
-    }
-  }
-</style>
+    <title>sheetsnolonger</title>
 </head>
 <body>
-  <header>
-    <h1>sheetsnolonger</h1>
-    <p>a music blog for thoughts & sounds.</p>
-  </header>
-
-  <main id="content">
-    <!-- Posts will load here -->
-  </main>
-
-  <section class="subscribe">
-    <h2>subscribe</h2>
-    <p>get notified when we post about music again.</p>
-    <form action="https://formspree.io/f/movljveq" method="POST">
-      <input type="email" name="email" placeholder="your email" required />
-      <button type="submit">subscribe</button>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2025 sheetsnolonger. all rights reserved.
-  </footer>
-
-  <script>
-    const posts = [
-      {
-      
-        id: "vinyls",
-        title: "vinyl records",
-        date: "july 18, 2025",
-        content: "I LOVE VINYL RECORDS1!!!!!! i remember popping a pink floyd vinyl on the record player when my dad still lived with us and him and i would always just jam outtt it was so much fun"
-      },
-      {
-        id: "chords",
-        title: "minor chords suck.",
-        date: "july 18, 2025",
-        content: "i hate minor chords. they always have the best sound but the weirdest finger placements. im so done with them bc tell me why i have to get arthritis in order to be good at guitar. no. ive been playing for 10 years, im done. not actually i love my guitar."
-      },
-      {
-        id: "19drawing",
-        title: "drew myself",
-        date: "july 19, 2025",
-        content: `
-          <img src="https://i.pinimg.com/736x/53/c1/1b/53c11b3ad719d0517afdab5c2d6e8f20.jpg" alt="sheetsnolonger" style="max-width:30%;margin-bottom:1rem;">
-          i drew myself, and im actually pretty proud of it. 
-        `
-      }
-    ];
-
-    const contentEl = document.getElementById("content");
-
-function renderPostList() {
-  contentEl.innerHTML = "";
-  [...posts].reverse().forEach(post => {
-    const textOnly = post.content.replace(/<img[^>]*>/gi, ''); // Remove any <img> tags
-    const div = document.createElement("div");
-    div.className = "post-preview";
-    div.innerHTML = `
-      <h2><a href="#${post.id}">${post.title}</a></h2>
-      <p><em>${post.date}</em></p>
-      <p>${textOnly.slice(0, 120)}...</p>
-    `;
-    contentEl.appendChild(div);
-  });
-}
 
 
-    function renderSinglePost(postId) {
-      const post = posts.find(p => p.id === postId);
-      if (!post) {
-        contentEl.innerHTML = "<p>post not found.</p>";
-        return;
-      }
+<body
+background="https://t4.ftcdn.net/jpg/03/86/82/73/360_F_386827376_uWOOhKGk6A4UVL5imUBt20Bh8cmODqzx.jpg">
+         
+     <marquee style="border:bla 3px solid" direction="right" font style="bold" scrolldelay="100"><font size="5"<font color="#66ff00">sheetsnolonger</marquee>
+     
+<p style="color: #ffffff;">hi im a coder, musician, and producer. im fifteen years old and i love what i do.</p>
 
-      contentEl.innerHTML = `
-        <div class="post-full">
-          <h2>${post.title}</h2>
-          <p><em>${post.date}</em></p>
-          <div>${post.content}</div>
-          <a href="#" class="back-link">← back to all posts</a>
-        </div>
-      `;
-    }
 
-    function handleRouting() {
-      const hash = window.location.hash.slice(1);
-      if (hash) {
-        renderSinglePost(hash);
-      } else {
-        renderPostList();
-      }
-    }
+    <p style="color: #ffffff;">m,k,x,m,n</p>
 
-    window.addEventListener("hashchange", handleRouting);
-    window.addEventListener("DOMContentLoaded", handleRouting);
-  </script>
+     
+     <img src="https://64.media.tumblr.com/a02e602c3dffcc35d500855c6edd67bc/a30a04cf9488f6fc-73/s250x400/94dcc05a136d273a9de77d6a49ba10ce9186cd72.gifv" style="width:30%">
+
+<h3 style="color: #ffffff;"> what kind of things do u code? </h3>
+
+<p style="color: #ffffff;">i code games, discord bots, websites, and other documents.</p>
+
+<h3 style="color: #ffffff;">what kind of music do u make?</h3>
+
+<p style="color: #ffffff;">i make shoegaze music, alongside other beats.</p>
+
+<marquee style="border:bla 3px solid" direction="right" font style="bold" scrolldelay="100"><font size="3"<font color="#ffffff">more information about this topic is at the bottom of this page.</marquee>
+
+<div class="row">
+  <div class="column">
+    <img src="https://64.media.tumblr.com/be017a7711ef1670c54105d60df24e54/1dcc7f8d4b224d40-49/s250x400/0ac339950b142facd032cf3998a26a0597988fcc.gifv" alt="mbv" style="width:30%">
+  </div>
+  <div class="column">
+    <img src="https://64.media.tumblr.com/cfbd738ab2029374e8e034f9673737f2/1dcc7f8d4b224d40-11/s250x400/e5a7cbbf7dfdeb78d10a8da61db11bfc2985dca4.gifv" alt="mbv" style="width:30%">
+  </div>
+  <div class="column">
+    <img src="https://64.media.tumblr.com/578a470a2b948ae3e2ee66d994959aa5/1dcc7f8d4b224d40-2e/s250x400/7a7c4d86c835a39144e0f94e1c38773ba34050da.gifv" alt="mbv" style="width:30%">
+  </div>
+</div>
+
+
+<h3 style="color: #ffffff;">can i commission you?</h3>
+
+<p style="color: #ffffff;">yes!!! you can commission me on either of these!</p>
+
+<IMG SRC="https://media.tenor.com/CC1VPnwBVMMAAAAi/gianbortion-cat.gif">.
+
+
+    
+    <p style="color: #ffffff;"> click here to email me for further questions!! >>> <a href="mailto:sheetsnolonger@gmail.com">email</a></p>
+    
+    <p style="color: #ffffff;">my music:
+    <br>
+    <a href="https://open.spotify.com/artist/0htYgN3Idh7feeCxhvM483?si=70A4OGlpQgKS0-AKORaCoA">gloria</a>
+   <br>
+   <a href="https://open.spotify.com/artist/4IfSd4bm03gUiLY7ckdAPA?si=XD0LCHzWQByF0s2e2g8FJQ">arose</a> </p>
 </body>
 </html>
+</body>
