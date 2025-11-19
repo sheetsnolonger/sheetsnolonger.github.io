@@ -1,64 +1,128 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sheetsnolonger</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <title>sheetsnolonger</title>
+    body {
+      font-family: "Times New Roman", serif !important;
+      margin: 0;
+      background: #ffddeb;
+      color: #222;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: #ffcade;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      font-family: "Times New Roman", serif;
+      text-transform: lowercase;
+      cursor: pointer;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .prices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .price-card {
+      padding: 1rem;
+      border-radius: 16px;
+      background: #fafafa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #ffcade;
+      color: white;
+      margin-top: 4rem;
+    }
+
+    h1, h2, h3, p, footer, nav a, .price-card, .section {
+      font-family: "Times New Roman", serif !important;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1 style="text-transform: lowercase;">sheetsnolonger</h1>
+    <nav>
+      <a href="#about">about</a>
+      <a href="#prices">prices</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
 
-
-<body
-background="https://t4.ftcdn.net/jpg/03/86/82/73/360_F_386827376_uWOOhKGk6A4UVL5imUBt20Bh8cmODqzx.jpg">
-         
-     <marquee style="border:bla 3px solid" direction="right" font style="bold" scrolldelay="100"><font size="5"<font color="#66ff00">sheetsnolonger</marquee>
-     
-<p style="color: #ffffff;">hi im a coder, musician, and producer. im fifteen years old and i love what i do.</p>
-
-
-    <p style="color: #ffffff;">m,a,n,a</p>
-
-     
-     <img src="https://64.media.tumblr.com/a02e602c3dffcc35d500855c6edd67bc/a30a04cf9488f6fc-73/s250x400/94dcc05a136d273a9de77d6a49ba10ce9186cd72.gifv" style="width:30%">
-
-<h3 style="color: #ffffff;"> what kind of things do u code? </h3>
-
-<p style="color: #ffffff;">i code games, discord bots, websites, and other documents.</p>
-
-<h3 style="color: #ffffff;">what kind of music do u make?</h3>
-
-<p style="color: #ffffff;">i make shoegaze music, alongside other beats.</p>
-
-<marquee style="border:bla 3px solid" direction="right" font style="bold" scrolldelay="100"><font size="3"<font color="#ffffff">more information about this topic is at the bottom of this page.</marquee>
-
-<div class="row">
-  <div class="column">
-    <img src="https://64.media.tumblr.com/be017a7711ef1670c54105d60df24e54/1dcc7f8d4b224d40-49/s250x400/0ac339950b142facd032cf3998a26a0597988fcc.gifv" alt="mbv" style="width:30%">
+  <div id="about" class="section">
+    <h2 style="text-transform: lowercase;">about</h2>
+    <p style="font-family: 'Times New Roman', serif;">hello i am sam, i make discord bots, websites, drawings, music, and beats. please look at my pricing below, and consider contacting me.</p>
   </div>
-  <div class="column">
-    <img src="https://64.media.tumblr.com/cfbd738ab2029374e8e034f9673737f2/1dcc7f8d4b224d40-11/s250x400/e5a7cbbf7dfdeb78d10a8da61db11bfc2985dca4.gifv" alt="mbv" style="width:30%">
+
+  <div id="prices" class="section">
+    <h2 style="text-transform: lowercase;">prices</h2>
+    <div class="prices-grid">
+      <div class="price-card">
+        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">discord bots</h3>
+        <p>$50+</p>
+      </div>
+      <div class="price-card">
+        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">websites</h3>
+        <p>$100+</p>
+      </div>
+      <div class="price-card">
+        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">drawings</h3>
+        <p>$20+</p>
+      </div>
+      <div class="price-card">
+        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">music</h3>
+        <p>$30+</p>
+      </div>
+      <div class="price-card">
+        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">beats</h3>
+        <p>$40+</p>
+      </div>
+    </div>
   </div>
-  <div class="column">
-    <img src="https://64.media.tumblr.com/578a470a2b948ae3e2ee66d994959aa5/1dcc7f8d4b224d40-2e/s250x400/7a7c4d86c835a39144e0f94e1c38773ba34050da.gifv" alt="mbv" style="width:30%">
+
+  <div id="contact" class="section">
+    <h2 style="text-transform: lowercase;">contact</h2>
+    <p>discord: lovemeloveme1996</p>
+    <p>instagram: @sheetsnolonger</p>
+    <p>twitter: @sheetsnolonger</p>
   </div>
-</div>
 
-
-<h3 style="color: #ffffff;">can i commission you?</h3>
-
-<p style="color: #ffffff;">yes!!! you can commission me on either of these!</p>
-
-<IMG SRC="https://media.tenor.com/CC1VPnwBVMMAAAAi/gianbortion-cat.gif">.
-
-
-    
-    <p style="color: #ffffff;"> click here to email me for further questions!! >>> <a href="mailto:sheetsnolonger@gmail.com">email</a></p>
-    
-    <p style="color: #ffffff;">my music:
-    <br>
-    <a href="https://open.spotify.com/artist/0htYgN3Idh7feeCxhvM483?si=70A4OGlpQgKS0-AKORaCoA">gloria</a>
-   <br>
-   <a href="https://open.spotify.com/artist/4IfSd4bm03gUiLY7ckdAPA?si=XD0LCHzWQByF0s2e2g8FJQ">arose</a> </p>
+  <footer>
+    <p>© 2025 sheetsnolonger — commissions open</p>
+  </footer>
 </body>
 </html>
-</body>
