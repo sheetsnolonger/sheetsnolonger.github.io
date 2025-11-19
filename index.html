@@ -71,6 +71,12 @@
     h1, h2, h3, p, footer, nav a, .price-card, .section {
       font-family: "Times New Roman", serif !important;
     }
+
+    @media (max-width: 600px) {
+      .prices-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -100,7 +106,7 @@
         <p>$100+</p>
       </div>
       <div class="price-card">
-        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">drawings</h3>
+        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">art</h3>
         <p>$20+</p>
       </div>
       <div class="price-card">
@@ -116,7 +122,7 @@
 
   <div id="contact" class="section">
     <h2 style="text-transform: lowercase;">contact</h2>
-    <p>discord: lovemeloveme1996</p>
+    <p>discord: @lovemeloveme1996</p>
     <p>instagram: @sheetsnolonger</p>
     <p>twitter: @sheetsnolonger</p>
   </div>
