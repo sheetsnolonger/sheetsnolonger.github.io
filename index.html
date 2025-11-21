@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>sheetsnolonger - commissions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>commissions</title>
 <style>
-  body {
+  html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: "Times New Roman", serif;
     background: url('https://wallblush.com/cdn/shop/files/AbbottWallpaperCamoPrint_5.png?v=1715894329&width=2048') center/cover fixed;
     color: #e8e8e8;
     text-transform: lowercase;
+  }
+
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   header {
@@ -120,6 +129,7 @@
       grid-template-columns: 1fr;
     }
   }
+  
 </style>
 </head>
 <body>
