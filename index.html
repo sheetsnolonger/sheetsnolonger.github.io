@@ -1,134 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sheetsnolonger</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>commissions</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    background: url('https://wallblush.com/cdn/shop/files/AbbottWallpaperCamoPrint_5.png?v=1715894329&width=2048') center/cover fixed;
+    color: #e8e8e8;
+    text-transform: lowercase;
+    scroll-behavior: smooth;
+  }
 
-    body {
-      font-family: "Times New Roman", serif !important;
-      margin: 0;
-      background: #ffddeb;
-      color: #222;
-    }
+  header {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+  }
 
-    header {
-      padding: 2rem;
-      text-align: center;
-      background: #ffcade;
-      color: white;
-    }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.1rem;
-      font-family: "Times New Roman", serif;
-      text-transform: lowercase;
-      cursor: pointer;
-    }
+  nav a {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
 
-    .section {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 1rem 2rem;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 
-    .prices-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
+  section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+  }
 
-    .price-card {
-      padding: 1rem;
-      border-radius: 16px;
-      background: #fafafa;
-    }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+  }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #ffcade;
-      color: white;
-      margin-top: 4rem;
-    }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
 
-    h1, h2, h3, p, footer, nav a, .price-card, .section {
-      font-family: "Times New Roman", serif !important;
-    }
+  .price-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+  }
 
-    @media (max-width: 600px) {
-      .prices-grid {
-        grid-template-columns: 1fr;
-      }
+  .price-description {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 16px;
+    color: #f0f0f0;
+    transition: max-height 0.5s ease, margin-top 0.5s ease;
+    margin-top: 0;
+  }
+
+  .price-description.open {
+    max-height: 200px;
+    margin-top: 10px;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  .contact-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .cat-img {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 120px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  @media (max-width: 600px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
     }
-  </style>
+  }
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1 style="text-transform: lowercase;">sheetsnolonger</h1>
-    <nav>
-      <a href="#about">about</a>
-      <a href="#prices">prices</a>
-      <a href="#contact">contact</a>
-    </nav>
-  </header>
 
-  <div id="about" class="section">
-    <h2 style="text-transform: lowercase;">about</h2>
-    <p style="font-family: 'Times New Roman', serif;">hello i am sam, i make discord bots, websites, drawings, music, and beats. please look at my pricing below, and consider contacting me.</p>
+<header>
+  <nav>
+    <a href="#about">about</a>
+    <a href="#pricing">pricing</a>
+    <a href="#contact">contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>about my commissions</h2>
+  <p>
+    everything i make is handmade, personalized, and fully custom. i love
+    creating cute, cozy-coded things with a soft vibe — now with a camo twist.
+  </p>
+</section>
+
+<section id="pricing">
+  <h2>pricing</h2>
+  <div class="pricing-grid">
+    <div class="price-card" onclick="toggleDescription(this)">discord bots<br>$30<div class="price-description">ai (ai chat) - +$30, moderation (ban, unban, kick, warn, unwarn, time, untime) - +$10, utility (ping, uptime, serverinfo, userinfo, avatar, banner) - +$5</div></div>
+    <div class="price-card" onclick="toggleDescription(this)">websites<br>$100+<div class="price-description">dm my discord @sheetsnolonger & explain the purpose of the website, i will then give you a cost estimate.</div></div>
+    <div class="price-card" onclick="toggleDescription(this)">drawings<br>$20+<div class="price-description">bust & up - $20, waist & up - $25, full body $30</div></div>
+    <div class="price-card" onclick="toggleDescription(this)">music & beats<br>$35+<div class="price-description">beats - $35, full instrumental - $40, collabs - $45</div></div>
   </div>
+</section>
 
-  <div id="prices" class="section">
-    <h2 style="text-transform: lowercase;">prices</h2>
-    <div class="prices-grid">
-      <div class="price-card">
-        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">discord bots</h3>
-        <p>$50+</p>
-      </div>
-      <div class="price-card">
-        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">websites</h3>
-        <p>$100+</p>
-      </div>
-      <div class="price-card">
-        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">art</h3>
-        <p>$20+</p>
-      </div>
-      <div class="price-card">
-        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">music</h3>
-        <p>$30+</p>
-      </div>
-      <div class="price-card">
-        <h3 style="font-family: 'Times New Roman', serif; text-transform: lowercase;">beats</h3>
-        <p>$40+</p>
-      </div>
-    </div>
-  </div>
+<section id="contact">
+  <h2>contact</h2>
+  <p>reach me on:</p>
+  <a href="https://discord.com/users/1430327259188826264" class="contact-btn" target="_blank">discord</a>
+  <a href="https://instagram.com/sheetsnolonger" class="contact-btn" target="_blank">instagram</a>
+  <a href="https://twitter.com/sheetsnolonger" class="contact-btn" target="_blank">twitter</a>
+</section>
 
-  <div id="contact" class="section">
-    <h2 style="text-transform: lowercase;">contact</h2>
-    <p>discord: @lovemeloveme1996</p>
-    <p>instagram: @sheetsnolonger</p>
-    <p>twitter: @sheetsnolonger</p>
-  </div>
+<img class="cat-img" src="https://64.media.tumblr.com/188d0561ed2b09c33c6c8010600a390f/4e086083709c7711-79/s1280x1920/360ee23f36e6ec35b57141d3e0058cb8c3307eba.pnj" />
 
-  <footer>
-    <p>© 2025 sheetsnolonger — commissions open</p>
-  </footer>
+<script>
+  function toggleDescription(card) {
+    const allDescs = document.querySelectorAll('.price-description');
+    allDescs.forEach(desc => {
+      if(desc !== card.querySelector('.price-description')) {
+        desc.classList.remove('open');
+      }
+    });
+    const desc = card.querySelector('.price-description');
+    desc.classList.toggle('open');
+  }
+</script>
+
 </body>
 </html>
